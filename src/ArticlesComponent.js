@@ -1,18 +1,17 @@
 import { Article } from './Arcticle.js';
 import { getArticles } from './getArticles.js';
+import { createTag } from './utils/createTag.js';
 
 export class ArticlesComponent {
-    constructor(apiKey, selectId, parentElement) {
+    constructor(apiKey, selectClass, parentElement, articlesContainerClass) {
         this.apiKey = apiKey;
         this.parentElement = parentElement;
-        this.selectId = selectId;
-        this.currentSelector = 'articles';
-        this.documentElement = document.getElementById(`${this.currentSelector}`);
-        this.articlesContainer = document.querySelector(".articles-container");
+        this.selectClass = selectClass;
+        this.articlesContainer = document.querySelector(`.${articlesContainerClass}`);
     }
 
     init() {
-        let channel = document.getElementById(this.selectId).value;
+        let channel = document.querySelector(`.${this.selectClass}`).value;
         getArticles(channel, this.apiKey).then(data => this.render(data.articles))
     }
 
@@ -21,8 +20,7 @@ export class ArticlesComponent {
         this.articles = sources.map(article => new Article(article.author, article.title, article.description, article.publishedAt, article.url, article.urlToImage));
 
         this.articles.map(source => {
-            let articleBody = document.createElement("div");
-            articleBody.className = 'article-body';
+            let articleBody = createTag('div', 'article-body')
             let details = `
             ${source.title ? `<h3 class="article-title"><a class="article-title-link" target="_blank" href="${source.url}">${source.title}</a></h3>` : ``}
           ${source.author ? `<span class="article-author">by ${source.author}</span>` : ``}
