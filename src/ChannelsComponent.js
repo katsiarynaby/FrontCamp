@@ -10,7 +10,6 @@ export class ChannelsComponent {
         this.selectClass = 'sourceSelectList';
         this.buttonClass = 'loadingNews';
         this.articlesContainerClass = 'articles-container';
-
     }
 
     init() {
