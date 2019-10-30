@@ -39,6 +39,12 @@
       margin-left: 8px;
   }
 
+  @media (max-width: 410px) {
+    select {
+        margin-bottom: 5px;
+    }
+  }
+
   button:hover,
   button:active {
       background: #beaf9a;
@@ -55,8 +61,11 @@
       display: inline-block;
       margin-top: 10px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2vw;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
+
+
 
   .article-body {
       background-color: #e4dbd1;

@@ -1,7 +1,6 @@
 import { Article } from './Arcticle.js';
 import { getArticles } from './getArticles.js';
 import { createTag } from './utils/createTag.js';
-
 export class ArticlesComponent {
     constructor(apiKey, selectClass, parentElement, articlesContainerClass) {
         this.apiKey = apiKey;
