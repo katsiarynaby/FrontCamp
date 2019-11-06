@@ -1,6 +1,8 @@
 import { Article } from './Arcticle.js';
-import { getArticles } from './getArticles.js';
-import { createTag } from './utils/createTag.js';
+import { createTag } from '../utils/createTag.js';
+import { Request } from '../RequestFactory/Request.js';
+import './style.css'
+
 export class ArticlesComponent {
     constructor(apiKey, selectClass, parentElement, articlesContainerClass) {
         this.apiKey = apiKey;
@@ -11,7 +13,7 @@ export class ArticlesComponent {
 
     init() {
         let channel = document.querySelector(`.${this.selectClass}`).value;
-        getArticles(channel, this.apiKey).then(data => this.render(data.articles))
+        Request.getArticles(channel, this.apiKey).then(data => this.render(data.articles))
     }
 
     render(sources) {

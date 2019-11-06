@@ -1,0 +1,10 @@
+.error-message {
+  display: block;
+  color: red;
+  border: 2px solid gray;
+  padding: 5px;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvRXJyb3JIYW5kbGVyUG9wdXAvc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsQyIsImZpbGUiOiJFcnJvckhhbmRsZVBvcHVwLmJ1bmRsZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXJyb3ItbWVzc2FnZSB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBjb2xvcjogcmVkO1xuICBib3JkZXI6IDJweCBzb2xpZCBncmF5O1xuICBwYWRkaW5nOiA1cHg7XG4gIG1hcmdpbjogMzBweCBhdXRvO1xuICBtYXgtd2lkdGg6IDgwMHB4O1xufSJdLCJzb3VyY2VSb290IjoiIn0=*/

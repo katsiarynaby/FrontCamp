@@ -1,7 +1,9 @@
-import { getSources } from './getSources.js';
+import { Request } from '../RequestFactory/Request.js';
 import { Channel } from './Channel.js';
-import { ArticlesComponent } from './ArticlesComponent.js';
-import { createTag } from './utils/createTag.js';
+import { ArticlesComponent } from '../Article/ArticlesComponent.js';
+import { createTag } from '../utils/createTag.js';
+
+import './style.css'
 
 export class ChannelsComponent {
     constructor(apiKey, parentElement) {
@@ -13,7 +15,7 @@ export class ChannelsComponent {
     }
 
     init() {
-        getSources(this.apiKey).then(data => this.render(data.sources));
+        Request.getSources(this.apiKey).then(data => this.render(data.sources));
     }
 
     render(sources) {
@@ -37,8 +39,7 @@ export class ChannelsComponent {
         let articlesContainer = createTag('div', this.articlesContainerClass);
         this.parentElement.appendChild(articlesContainer);
 
-        let self = this;
         let btnLoadingNews = document.querySelector(`.${this.buttonClass}`);
-        btnLoadingNews.onclick = () => new ArticlesComponent(self.apiKey, this.selectClass, this.parentElement, this.articlesContainerClass).init();
+        btnLoadingNews.onclick = () => new ArticlesComponent(this.apiKey, this.selectClass, this.parentElement, this.articlesContainerClass).init();
     }
 }

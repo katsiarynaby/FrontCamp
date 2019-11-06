@@ -1,4 +1,4 @@
-import { ChannelsComponent } from './ChannelsComponent.js';
+import { ChannelsComponent } from './Channel/ChannelsComponent';
 export class App {
     constructor(apiKey) {
         this.apiKey = apiKey;

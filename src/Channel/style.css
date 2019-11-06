@@ -1,0 +1,40 @@
+.articles-container {
+    display: inline-block;
+    margin-top: 10px;
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+select {
+    width: 200px;
+    padding: 5px 10px;
+    height: 40px;
+    font-size: 15px;
+    color: black;
+    background: #e0dbd4;
+    border-radius: 2px;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    background: #e0dbd4;
+    border-radius: 3px;
+    border: none;
+    margin-left: 8px;
+}
+
+@media (max-width: 410px) {
+  select {
+      margin-bottom: 5px;
+  }
+}
+
+button:hover,
+button:active {
+    background: #beaf9a;
+}
