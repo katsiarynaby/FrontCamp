@@ -17,8 +17,8 @@ router.get('/:id', (req, res) => {
 
 router.put('/:id', (req, res) => {
   const id = req.params.id;
-  const index =  mockData.sources.findIndex(article => article.id === req.params.id);
   const article = req.body;
+  const index =  mockData.sources.findIndex(article => article.id === req.params.id);
   if (index !== -1) {
     mockData.sources[index] = article;
   } else {
