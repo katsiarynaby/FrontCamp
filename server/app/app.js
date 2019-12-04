@@ -1,9 +1,20 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const router = require('../api/router');
 const winston = require('winston');
 const expressWinston = require('express-winston');
+
+mongoose.connect(
+  'mongodb://localhost:27017/frontcamp', 
+  {
+    useNewUrlParser: true, 
+    useFindAndModify:false,
+    useUnifiedTopology: true, 
+    useCreateIndex: true
+  }
+);
 
 app.use(bodyParser.json());
 
